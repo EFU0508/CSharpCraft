@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4882C3C-7EB1-49FA-A8F0-960F8A54F8F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CSharpCraft</RootNamespace>
+    <AssemblyName>CSharpCraft</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>usochan_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ManagedDXL, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ManagedDxLib_324f\x64\ManagedDXL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CmnDxlib\Calc.cs" />
+    <Compile Include="CmnDxlib\FileFunc.cs" />
+    <Compile Include="CmnDxlib\Func.cs" />
+    <Compile Include="CmnDxlib\Input.cs" />
+    <Compile Include="GameLabo\Base\BaseController.cs" />
+    <Compile Include="GameLabo\Base\BaseEvents.cs" />
+    <Compile Include="GameLabo\Base\BaseManager.cs" />
+    <Compile Include="GameLabo\Base\BaseView.cs" />
+    <Compile Include="GameLabo\Control\FieldOperation.cs" />
+    <Compile Include="GameLabo\Control\HotBar.cs" />
+    <Compile Include="GameLabo\Control\HunterOperation.cs" />
+    <Compile Include="GameLabo\Control\Player.cs" />
+    <Compile Include="GameLabo\Data\GameData.cs" />
+    <Compile Include="GameLabo\Data\LoadData.cs" />
+    <Compile Include="GameLabo\Lib\StClass.cs" />
+    <Compile Include="GameLabo\Lib\StClassLib.cs" />
+    <Compile Include="GameLabo\MineCraft\Chunks.cs" />
+    <Compile Include="GameLabo\MineCraft\Physics.cs" />
+    <Compile Include="GameLabo\MineCraft\Portal.cs" />
+    <Compile Include="GameLabo\MineCraft\World.cs" />
+    <Compile Include="GameLabo\Npc\NpcManager.cs" />
+    <Compile Include="GameLabo\Npc\NpcStage000.cs" />
+    <Compile Include="GameLabo\Npc\NpcStage001.cs" />
+    <Compile Include="GameLabo\Npc\NpcStage002.cs" />
+    <Compile Include="GameLabo\Npc\NpcStageBase.cs" />
+    <Compile Include="GameLabo\Shader\Distortion.cs" />
+    <Compile Include="GameLgn\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameLgn\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelLib\Model.cs" />
+    <Compile Include="ModelLib\ModelInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scenario\GameStart.cs" />
+    <Compile Include="Scenario\Scene.cs" />
+    <Compile Include="Stage000\StageController.cs" />
+    <Compile Include="Stage000\StageEvents.cs" />
+    <Compile Include="Stage000\StageManager.cs" />
+    <Compile Include="Stage000\StageView.cs" />
+    <Compile Include="Stage001\StageController.cs" />
+    <Compile Include="Stage001\StageEvents.cs" />
+    <Compile Include="Stage001\StageManager.cs" />
+    <Compile Include="Stage001\StageView.cs" />
+    <Compile Include="Stage002\StageController.cs" />
+    <Compile Include="Stage002\StageEvents.cs" />
+    <Compile Include="Stage002\StageManager.cs" />
+    <Compile Include="Stage002\StageView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\Capybara\capybara.mv1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\HuntingKit\Arrow_stick.mv1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\HuntingKit\Wooden_Bow.mv1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shader\DistortionPS.pso">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Shader\DistortionVS.vso">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\SlimeBes\SlimeBes_base.mv1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Slime\Slime_base.mv1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Usochan\usochan_base.mv1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Usochan\usochan_base_upper.mv1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Usochan\usochan_kit.mv1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\BGM\Build.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BGM\Cob.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BGM\Ending.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BGM\Field1.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BGM\Field2.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BGM\Field3.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BGM\Field4.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BGM\Mortality.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\BGM\Scrape.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Capybara\capybara.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shader\DistortionPS.hlsl" />
+    <Content Include="Resources\Shader\DistortionVS.hlsl" />
+    <Content Include="Resources\SlimeBes\Slime02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slime\Slime01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Usochan\usochan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Usochan\usochan_ura.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Various\BlockChip.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Various\Fog.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Various\moon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Various\sun.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Various\yagi_home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="usochan_icon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="GameLgn\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)..\DxLib_VC3_24f\Tool\ShaderCompiler\ShaderCompiler.exe /Tps_5_0 $(ProjectDir)Resources\Shader\DistortionPS.hlsl
+$(SolutionDir)..\DxLib_VC3_24f\Tool\ShaderCompiler\ShaderCompiler.exe /Tvs_5_0 $(ProjectDir)Resources\Shader\DistortionVS.hlsl</PreBuildEvent>
+  </PropertyGroup>
+</Project>
