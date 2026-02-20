@@ -57,7 +57,7 @@ namespace GameLabo
             // ESCキーで終了確認
             if (CheckHitKey(KEY_INPUT_ESCAPE) == TRUE)
             {
-                DialogResult dr = MessageBox.Show("ゲームを終了しますか？", "Pakulia", MessageBoxButtons.OKCancel);
+                DialogResult dr = MessageBox.Show("ゲームを終了しますか？", "CSharpCraft", MessageBoxButtons.OKCancel);
                 if (dr == DialogResult.OK)
                 {
                     StClass.isRunning = false;
